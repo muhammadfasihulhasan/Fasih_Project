@@ -7,3 +7,6 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.impute import SimpleImputer
 from pandas.plotting import scatter_matrix
 import plotly.express as px
+
+df = pd.read_csv('d:\DS\Programming\Fasih\Fasih_Project\weatherAUS.csv')
+
