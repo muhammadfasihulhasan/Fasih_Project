@@ -81,6 +81,22 @@ import plotly.express as px
 from sklearn.model_selection import train_test_split
 X_train , X_test , Y_train , Y_test = train_test_split(X,Y, test_size = 0.2)
 
+#Now importing classification report, confusion matrix and accuracy score for metrics purpose
+from sklearn.metrics import classification_report , confusion_matrix , accuracy_score
+
+#Now the first model we will be using is Decision Tree
+#model_1 = DecisionTreeClassifier()
+#model_1.fit(X_train,Y_train)
+#predictions = model_1.predict(X_test)
+#print(confusion_matrix(Y_test,predictions))
+#print(classification_report(Y_test,predictions))
+#print(accuracy_score(Y_test,predictions))
+
+
+
+
+
+
 
 
 
