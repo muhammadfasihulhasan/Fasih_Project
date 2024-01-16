@@ -93,12 +93,21 @@ from sklearn.metrics import classification_report , confusion_matrix , accuracy_
 #print(accuracy_score(Y_test,predictions))
 
 #Now the second model we will be using is Logistic Regression
-#model = LogisticRegression(max_iter=1000)
-#model.fit(X_train,Y_train)
-#predictions = model.predict(X_test)
+#model_2 = LogisticRegression(max_iter=1000)
+#model_2.fit(X_train,Y_train)
+#predictions = model_2.predict(X_test)
 #print(confusion_matrix(Y_test,predictions))
 #print(classification_report(Y_test,predictions))
 #print(accuracy_score(Y_test,predictions))
+
+#The last model we will be using is Random Forest Classifier
+#model_3 = RandomForestClassifier()
+#model_3.fit(X_train,Y_train)
+#predictions = model_3.predict(X_test)
+#print(confusion_matrix(Y_test,predictions))
+#print(classification_report(Y_test,predictions))
+#print(accuracy_score(Y_test,predictions))
+
 
 
 
