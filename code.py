@@ -66,6 +66,7 @@ st.write(df.head())
 st.subheader("Exploratory Data Analysis")
 
 st.write("Now exploring/visualizing data using different types of plots") 
+
 #Firstly a  scatter plot showing Mininmum temperature vs the Maximum temperature in which the categorical variable will be Rain Tomorrow
 from pandas.plotting import scatter_matrix
 plt.figure(figsize=(8,8))
@@ -196,27 +197,27 @@ def predict(Location, minTemp, maxTemp, rainfall,
 def main():
     st.title("Weather Prediction App")
 
-    Location = st.number_input("Location", format="%d", step=1)
-    minTemp = st.number_input("Min Temperature", min_value=-10.0, max_value=50.0)
-    maxTemp = st.number_input("Max Temperature", min_value=-10.0, max_value=50.0)
-    rainfall = st.number_input("Rainfall", min_value=0.0, max_value=500.0)
+    Location = st.number_input("Location", step=1)
+    minTemp = st.number_input("Min Temperature", min_value=-10, max_value=50)
+    maxTemp = st.number_input("Max Temperature", min_value=-10, max_value=50)
+    rainfall = st.number_input("Rainfall", min_value=0, max_value=500)
 
     windGustDir = st.number_input("Wind Gust Direction", min_value=0, max_value=360)
-    windGustSpeed = st.number_input("Wind Gust Speed", min_value=0.0, max_value=200.0)
+    windGustSpeed = st.number_input("Wind Gust Speed", min_value=0, max_value=200)
     winddDir9am = st.number_input("Wind Direction 9am", min_value=0, max_value=360)
     winddDir3pm = st.number_input("Wind Direction 3pm", min_value=0, max_value=360)
-    windSpeed9am = st.number_input("Wind Speed 9am", min_value=0.0, max_value=200.0)
-    windSpeed3pm = st.number_input("Wind Speed 3pm", min_value=0.0, max_value=200.0)
+    windSpeed9am = st.number_input("Wind Speed 9am", min_value=0, max_value=200)
+    windSpeed3pm = st.number_input("Wind Speed 3pm", min_value=0, max_value=200)
 
-    humidity9am = st.number_input("Humidity 9am", min_value=0.0, max_value=100.0)
-    humidity3pm = st.number_input("Humidity 3pm", min_value=0.0, max_value=100.0)
-    pressure9am = st.number_input("Pressure 9am", min_value=800.0, max_value=1200.0)
-    pressure3pm = st.number_input("Pressure 3pm", min_value=800.0, max_value=1200.0)
+    humidity9am = st.number_input("Humidity 9am", min_value=0, max_value=100)
+    humidity3pm = st.number_input("Humidity 3pm", min_value=0, max_value=100)
+    pressure9am = st.number_input("Pressure 9am", min_value=800, max_value=1200)
+    pressure3pm = st.number_input("Pressure 3pm", min_value=800, max_value=1200)
 
-    temp9am = st.number_input("Temperature 9am", min_value=-10.0, max_value=50.0)
-    temp3pm = st.number_input("Temperature 3pm", min_value=-10.0, max_value=50.0)
+    temp9am = st.number_input("Temperature 9am", min_value=-10, max_value=50)
+    temp3pm = st.number_input("Temperature 3pm", min_value=-10, max_value=50)
 
-    rainToday = st.number_input("Rain Today", min_value=0.0, max_value=1.0)
+    rainToday = st.number_input("Rain Today", min_value=0, max_value=1)
 
     if st.button("Predict"):
         prediction = predict(Location, minTemp, maxTemp, rainfall,
